@@ -34,7 +34,7 @@ const Portofolio = () => {
       <h1 className="text-white text-6xl max-w-[320px] mx-auto font-semibold my-12">
         Selected <span className="text-orange-400 ">Projects</span>
       </h1>
-      <div className="max-w-[1000px] mx-auto mt-32 space-y-24">
+      <div className="px-6 md:px-0 max-w-[1000px] mx-auto mt-32 space-y-24">
         {projects.map((project, i) => (
           <motion.div
             key={i}
@@ -42,10 +42,10 @@ const Portofolio = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.25 }}
-            className={`flex ${
+            className={`flex flex-col ${
               (i + 1) % 2 === 0
-                ? "flex-col-reverse md:flex-row-reverse gap-12"
-                : "flex-col md:flex-row"
+                ? "md:flex-row-reverse gap-12"
+                : "md:flex-row"
             }`}
           >
             <div className="space-y-2 max-w-[550px] ">
