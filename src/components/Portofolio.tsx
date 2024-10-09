@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
-import project2 from "../assets/proj2.png";
-import project1 from "../assets/proj1.png";
+import project2 from "@/assets/proj2.png";
+import project1 from "@/assets/proj1.png";
 
 const projects = [
   {
