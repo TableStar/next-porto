@@ -1,12 +1,23 @@
+'use client'
+
 import Image from "next/image";
 import React from "react";
-import aboutImg from "../assets/profilepic.png";
 import book from "../assets/book.png";
 import pc from "../assets/pc.png";
 import card from "../assets/card.png";
 import finance from "../assets/finance.png";
 
+
 const About = () => {
+  const onButtonClick = () => {
+    const pdfUrl = "/CV.pdf";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "document.pdf"; // specify the filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
   return (
     <div className="max-w-[1200px] mx-auto" id="about">
       <h1 className="text-white text-6xl max-w-[320px] mx-auto font-semibold p-4 mb-4">
@@ -21,7 +32,7 @@ const About = () => {
               <h2 className="text-2xl font-bold text-white/80">Education</h2>
               <p className="text-lg text-white/90 mt-2">
                 I hold a degree in Medical Education and am an alumnus of
-                Purwadhika Digital Technology School's Web Development Bootcamp.
+                Purwadhika Digital Technology School&#39;s Web Development Bootcamp.
               </p>
             </div>
           </div>
@@ -70,6 +81,11 @@ const About = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="flex justify-center items-center mt-24">
+        <button onClick={onButtonClick} className="w-[300px] h-[70px] bg-orange-700 hover:bg-orange-500 text-white px-6 py-2 font-semibold text-xl rounded-xl">
+          Download My Resume
+        </button>
       </div>
     </div>
   );

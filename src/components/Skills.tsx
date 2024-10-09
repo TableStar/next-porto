@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCss3Alt, FaHtml5, FaReact } from "react-icons/fa";
+import { FaHtml5, FaReact } from "react-icons/fa";
 import { FaGolang } from "react-icons/fa6";
 import { SiTailwindcss, SiTypescript } from "react-icons/si";
 
