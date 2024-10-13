@@ -12,11 +12,11 @@ const Contact = () => {
       <div className="flex justify-center items-center">
         <ul className="space-y-4">
           <li className="flex items-center">
-            <Image src={phone} alt="phone" className="h-[110px] w-auto mr-6" />
+            <Image src={phone} alt="phone" className="h-[72px] md:h-[110px] w-auto mr-6" />
             <p className="md:text-xl">+62 82447292896</p>
           </li>
           <li className="flex items-center">
-            <Image src={mail} alt="mail" className="h-[110px] w-auto mr-6" />
+            <Image src={mail} alt="mail" className="h-[72px] md:h-[110px] w-auto mr-6" />
             <p className="md:text-xl">afrasuperblack@gmail.com</p>
           </li>
         </ul>
