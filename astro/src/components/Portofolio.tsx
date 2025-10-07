@@ -1,10 +1,6 @@
-"use client";
-
-import { motion } from "framer-motion";
-import Image from "next/image";
 import React from "react";
-import project2 from "@/assets/proj2.png";
-import project1 from "@/assets/proj1.png";
+import project2 from "../assets/proj2.png";
+import project1 from "../assets/proj1.png";
 
 const projects = [
   {
@@ -36,12 +32,8 @@ const Portofolio = () => {
       </h1>
       <div className="px-6 md:px-0 max-w-[1000px] mx-auto mt-32 space-y-24">
         {projects.map((project, i) => (
-          <motion.div
+          <div
             key={i}
-            initial={{ opacity: 0, y: 75 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.25 }}
             className={`flex flex-col ${
               (i + 1) % 2 === 0
                 ? "md:flex-row-reverse gap-12"
@@ -65,13 +57,13 @@ const Portofolio = () => {
               </div>
             </div>
             <div className="flex justify-center items-center ">
-              <Image
+              <img
                 src={project.src}
                 alt={project.title}
                 className="h-[500px] w-[350px] object-cover border rounded border-gray-700"
               />
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>

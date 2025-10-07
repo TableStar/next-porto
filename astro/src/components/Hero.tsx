@@ -1,9 +1,6 @@
-"use client";
-import Image from "next/image";
-import cursor from "@/assets/icon1.png";
-import lightning from "@/assets/icon2.png";
-import { motion } from "framer-motion";
-import profilepic from "@/assets/profilepic.png";
+import cursor from "../assets/icon1.png";
+import lightning from "../assets/icon2.png";
+import profilepic from "../assets/profilepic.png";
 
 const Hero = () => {
   return (
@@ -14,31 +11,31 @@ const Hero = () => {
           <h1 className="text-[#98B4CE]">Hi, I am</h1>
           <h1 className="text-[#E48A57]">Afra Hanifi</h1>
         </div>
-        <motion.div className="hidden md:block absolute left-[180px] top-[170px]" drag>
-          <Image
+        <div className="hidden md:block absolute left-[180px] top-[170px]">
+          <img
             src={cursor}
             alt="cursor"
             height={190}
             width={190}
             draggable={false}
             className=""
-          ></Image>
-        </motion.div>
-        <motion.div className="hidden md:block absolute right-[220px] top-[20px]" drag>
-          <Image
+          />
+        </div>
+        <div className="hidden md:block absolute right-[220px] top-[20px]">
+          <img
             src={lightning}
             alt="cursor"
             height={120}
             width={120}
             draggable={false}
             className=""
-          ></Image>
-        </motion.div>
+          />
+        </div>
         <p className="text-center text-xl max-w-[500px] mx-auto mt-8 text-white/80">
           I am a full-stack developer focused on learning how to make great
           websites
         </p>
-        <Image
+        <img
           src={profilepic}
           alt="profile picture"
           className="h-60 w-60 mx-auto object-cover rounded-full mt-5"

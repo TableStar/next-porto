@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-import Link from "next/link";
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
@@ -43,9 +39,9 @@ const Navbar = () => {
         <ul className="flex flex-row p-4 space-x-8">
           {navLinks.map((link, i) => (
             <li key={i}>
-              <Link href={link.path}>
+              <a href={link.path}>
                 <p>{link.title}</p>
-              </Link>
+              </a>
             </li>
           ))}
           <li>
@@ -67,23 +63,20 @@ const Navbar = () => {
       >
         {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
       </div>
-      <motion.div
-        initial={false}
-        animate= {nav? 'open':'closed'}
-        variants={menuVariants}
-        className="fixed left-0 top-0 w-full z-40 bg-black/90"
+      <div
+        className={`fixed left-0 top-0 w-full z-40 bg-black/90 ${nav ? 'block' : 'hidden'}`}
       >
         <ul className="text-4xl font-semibold my-24 text-center space-y-8">
             {navLinks.map((link,i) => (
               <li key={i}>
-                <Link href={link.path} onClick={closeNav}>
+                <a href={link.path} onClick={closeNav}>
                     {link.title}
-                </Link>
+                </a>
               </li>
 
             ))}
         </ul>
-      </motion.div>
+      </div>
     </div>
   );
 };

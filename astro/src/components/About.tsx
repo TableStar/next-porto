@@ -1,11 +1,8 @@
-'use client'
-
-import Image from "next/image";
 import React from "react";
-import book from "@/assets/book.png";
-import pc from "@/assets/pc.png";
-import card from "@/assets/card.png";
-import finance from "@/assets/finance.png";
+import book from "../assets/book.png";
+import pc from "../assets/pc.png";
+import card from "../assets/card.png";
+import finance from "../assets/finance.png";
 
 
 const About = () => {
@@ -27,7 +24,7 @@ const About = () => {
         <div className="w-full md:col-span-5 relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-purple-700 to-orange-800 opacity-30 animate-gradient-xy"></div>
           <div className="flex flex-row  p-6">
-            <Image src={book} alt="book" className="w-auto h-[130px]" />
+            <img src={book.src} alt="book" className="w-auto h-[130px]" />
             <div className="flex flex-col mt-4">
               <h2 className="text-2xl font-bold text-white/80">Education</h2>
               <p className="text-lg text-white/90 mt-2">
@@ -40,7 +37,7 @@ const About = () => {
         <div className="w-full md:col-span-3 relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-purple-700 to-orange-800 opacity-30 animate-gradient-xy"></div>
           <div className="flex flex-row p-6">
-            <Image src={finance} alt="finance" className="w-auto h-[130px]" />
+            <img src={finance.src} alt="finance" className="w-auto h-[130px]" />
             <div className="flex flex-col mt-4">
               <h2 className="text-2xl font-bold text-white/80">
                 Problem-solving
@@ -54,7 +51,7 @@ const About = () => {
         <div className="w-full md:col-span-3 relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-purple-700 to-orange-800 opacity-30 animate-gradient-xy"></div>
           <div className="flex flex-row p-6">
-            <Image src={card} alt="card" className="w-auto h-[130px]" />
+            <img src={card.src} alt="card" className="w-auto h-[130px]" />
             <div className="flex flex-col mt-4">
               <h2 className="text-2xl font-bold text-white/80">Experience</h2>
               <p className="text-lg text-white/90 mt-2">
@@ -66,7 +63,7 @@ const About = () => {
         <div className="w-full md:col-span-5 relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-purple-700 to-orange-800 opacity-30 animate-gradient-xy"></div>
           <div className="flex flex-row p-6">
-            <Image src={pc} alt="pc" className="w-auto h-[130px]" />
+            <img src={pc.src} alt="pc" className="w-auto h-[130px]" />
             <div className="flex flex-col mt-4">
               <h2 className="text-2xl font-bold text-white/80">
                 Technical Skill

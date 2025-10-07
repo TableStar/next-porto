@@ -5,15 +5,18 @@
 - **Build:** `npm run build`
 - **Lint:** `npm run lint`
 - **Development Server:** `npm run dev`
-- **Testing:** No dedicated test command found.
+- **Testing:** No test framework configured. Add Jest/Cypress if needed.
 
 ### Code Style and Conventions
 
-- **Formatting:** Adhere to the default formatting provided by Next.js and Prettier.
-- **Imports:** Use absolute paths with `@/*` for imports within the `src` directory.
-- **Types:** This is a TypeScript project. Use strict typing.
-- **Naming Conventions:** Follow standard TypeScript/React naming conventions (e.g., PascalCase for components, camelCase for variables and functions).
-- **Error Handling:** Implement robust error handling for all external calls and state updates.
-- **Styling:** Use Tailwind CSS for styling, leveraging theme variables for colors like `background` and `foreground`.
-- **Components:** Create components in the `src/components` directory.
-- **State Management:** Use React hooks for local state. For global state, a library like Context API or Zustand would be appropriate if needed.
+- **Formatting:** Adhere to Next.js and Prettier defaults. Use TypeScript strict mode.
+- **Imports:** Use absolute paths with `@/*` for `src/` directory imports.
+- **Types:** Strict TypeScript with Zod schemas for form validation. Prefer `type` over `interface` for type definitions.
+- **Naming:** PascalCase for components, camelCase for variables/functions.
+- **Error Handling:** Robust error handling for API calls and form submissions.
+- **Styling:** Tailwind CSS with custom theme colors. Use responsive design.
+- **Components:** Client components use `"use client"` directive. Place in `src/components/`.
+- **Forms:** React Hook Form with Zod validation. Handle submission states.
+- **Animations:** Framer Motion for interactive elements.
+- **Environment:** Use `NEXT_PUBLIC_` prefixed env vars for client-side config.
+- **State Management:** React hooks for local state. Context API for global state if needed.

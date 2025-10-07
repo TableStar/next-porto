@@ -1,10 +1,7 @@
-"use client";
-
 import React, { useState } from "react";
-import phone from "@/assets/phone.png";
-import mail from "@/assets/mail.png";
-import Image from "next/image";
-import { ContactFormData, contactFormSchema } from "@/types/ContactFormSchema";
+import phone from "../assets/phone.png";
+import mail from "../assets/mail.png";
+import { ContactFormData, contactFormSchema } from "../types/ContactFormSchema";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
@@ -23,7 +20,7 @@ const Contact = () => {
 
   const onSubmit = async (data: ContactFormData) => {
     setFeedback({ type: "", message: "" });
-    const backendUrl = process.env.NEXT_PUBLIC_API_URL ?? "";
+    const backendUrl = import.meta.env.PUBLIC_API_URL ?? "";
 
     if (!backendUrl.length) {
       throw new Error("where the fuck is the backend url!!!!");
@@ -61,7 +58,7 @@ const Contact = () => {
       <div className="flex justify-center items-center">
         <ul className="space-y-4">
           <li className="flex items-center">
-            <Image
+            <img
               src={phone}
               alt="phone"
               className="h-[72px] md:h-[110px] w-auto mr-6"
@@ -69,7 +66,7 @@ const Contact = () => {
             <p className="md:text-xl">+62 82447292896</p>
           </li>
           <li className="flex items-center">
-            <Image
+            <img
               src={mail}
               alt="mail"
               className="h-[72px] md:h-[110px] w-auto mr-6"
