@@ -1,83 +1,64 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 const navLinks = [
   { title: "About", path: "#about" },
-  { title: "Portofolio", path: "#portfolio" },
+  { title: "Portfolio", path: "#portfolio" },
 ];
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
 
-  const toggleNav = () => {
-    setNav(!nav);
-  };
-  const closeNav = () => {
-    setNav(false);
-  };
-
-  const menuVariants = {
-    open: {
-      x: 0,
-      transition: {
-        stiffness: 20,
-        damping: 15,
-      },
-    },
-    closed: {
-      x: '-100%',
-      transition: {
-        stiffness: 20,
-        damping: 15,
-      },
-    },
-  };
+  const toggleNav = () => setNav(!nav);
+  const closeNav = () => setNav(false);
 
   return (
-    <div className="text-white/70 pt-6">
-      <div className="hidden md:flex items-center px-4 py-2 mx-auto max-w-[400px]">
-        <ul className="flex flex-row p-4 space-x-8">
-          {navLinks.map((link, i) => (
-            <li key={i}>
-              <a href={link.path}>
-                <p>{link.title}</p>
+    <header className="pt-6">
+      {/* Desktop Menu */}
+      <nav className="hidden md:flex justify-center items-center max-w-xs mx-auto">
+        <ul className="flex flex-row items-center space-x-8 p-4">
+          {navLinks.map((link) => (
+            <li key={link.path}>
+              <a href={link.path} className="hover:text-[var(--color-accent)] transition-colors">
+                {link.title}
               </a>
             </li>
           ))}
           <li>
-            <a href="#contact" className="group">
-              <h1 className="text-lg font-bold text-white/70 cursor-pointer">
-                Contact Me
-              </h1>
-              <div className="relative">
-                <div className="absolute w-2/3 h-1 transition-all duration-300 ease-out bg-orange-400 rounded-full group-hover:w-full"></div>
-                <div className="mt-1 absolute w-1/3 h-1 transition-all duration-300 ease-out bg-orange-600 rounded-full group-hover:w-full"></div>
-              </div>
+            <a href="#contact" className="font-bold hover:text-[var(--color-accent)] transition-colors">
+              Contact Me
             </a>
           </li>
         </ul>
+      </nav>
+
+      {/* Mobile Menu Button */}
+      <div className="md:hidden flex justify-end p-4">
+          <button onClick={toggleNav} className="absolute top-5 right-5 border rounded border-white/70 p-2 z-50">
+            {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
+          </button>
       </div>
-      <div
-        onClick={toggleNav}
-        className="md:hidden absolute top-5 right-5 border rounded text-white/70 border-white/70 p-2 z-50"
-      >
-        {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
-      </div>
-      <div
-        className={`fixed left-0 top-0 w-full z-40 bg-black/90 ${nav ? 'block' : 'hidden'}`}
-      >
-        <ul className="text-4xl font-semibold my-24 text-center space-y-8">
-            {navLinks.map((link,i) => (
-              <li key={i}>
+
+      {/* Mobile Menu Overlay */}
+      <div className={`fixed inset-0 bg-black/90 z-40 md:hidden ${nav ? 'block' : 'hidden'}`}>
+        <nav className="flex flex-col items-center justify-center h-full">
+          <ul className="text-4xl font-semibold text-center space-y-8">
+            {navLinks.map((link) => (
+              <li key={link.path}>
                 <a href={link.path} onClick={closeNav}>
-                    {link.title}
+                  {link.title}
                 </a>
               </li>
-
             ))}
-        </ul>
+             <li>
+                <a href="#contact" onClick={closeNav}>
+                  Contact Me
+                </a>
+              </li>
+          </ul>
+        </nav>
       </div>
-    </div>
+    </header>
   );
 };
 

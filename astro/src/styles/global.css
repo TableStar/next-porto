@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@theme {
+  --color-background: #000; /* Black background */
+  --color-text: theme(colors.white / 80%); /* White text with 80% opacity */
+  --color-accent: theme(colors.orange.400);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: theme(fontFamily.sans);
+}
