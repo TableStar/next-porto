@@ -9,6 +9,12 @@
   --color-accent: #ff7b72;
   --color-accent-hover: #ff9580;
   --color-blue: #58a6ff;
+  --animate-blink: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
 }
 
 body {
