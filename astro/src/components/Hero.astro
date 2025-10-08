@@ -3,25 +3,27 @@ import Image from "astro/components/Image.astro";
 import profilepic from "../assets/profilepic.png";
 ---
 
-<div
-  class="py-24 relative overflow-clip bg-[linear-gradient(to_bottom,#000,#2B1942_35%,#8F5C55_60%,#DBAF6E_80%)]"
->
-  <div
-    class="absolute rounded-[50%] w-[3000px] h-[1300px] top-[550px] left-[50%] -translate-x-1/2 bg-[radial-gradient(closest-side,#000_80%,#2B1942)]"
-  >
-  </div>
-  <div class="relative">
-    <div class="text-8xl font-bold text-center">
-      <h1 class="text-[#98B4CE]">Hi, I am</h1>
-      <h1 class="text-[#E48A57]">Afra Hanifi</h1>
+<div class="py-20 px-6">
+  <div class="max-w-4xl mx-auto space-y-6">
+    <div class="text-text-muted">
+      <span class="text-accent">$</span> cat introduction.txt
     </div>
-    <p class="text-center text-xl max-w-[500px] mx-auto mt-8 text-white/80">
-      I am a full-stack developer focusing on making great websites and web apps
-    </p>
-    <Image
-      src={profilepic}
-      alt="profile"
-      class="h-60 w-60 mx-auto object-cover rounded-full mt-5"
-    />
+    <div class="py-6 max-w-xl space-y-4">
+      <div class="text-5xl font-bold">
+        <h1 class="">Hi, I am <span class="text-accent">Afra Hanifi</span></h1>
+      </div>
+      <p class="text-lg text-text-muted">
+        I am a full-stack developer focusing on making great websites and web
+        apps
+      </p>
+      <Image
+        src={profilepic}
+        alt="profile"
+        class="h-40 w-40 object-cover rounded-full "
+      />
+    </div>
+    <div class="text-accent">
+      ~/portfolio
+    </div>
   </div>
 </div>
