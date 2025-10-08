@@ -1,13 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #000; /* Black background */
-  --color-text: theme(colors.white / 80%); /* White text with 80% opacity */
-  --color-accent: theme(colors.orange.400);
+  --color-bg: #0d1117;
+  --color-bg-secondary: #161b22;
+  --color-text: #c9d1d9;
+  --color-text-muted: #8b949e;
+  --color-border: #30363d;
+  --color-accent: #ff7b72;
+  --color-accent-hover: #ff9580;
+  --color-blue: #58a6ff;
 }
 
 body {
-  background-color: var(--color-background);
+  background-color: var(--color-bg);
   color: var(--color-text);
-  font-family: theme(fontFamily.sans);
+  font-family: 'IBM Plex Mono', monospace;
 }
