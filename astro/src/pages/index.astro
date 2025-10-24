@@ -1,10 +1,12 @@
 ---
 import Hero from '../components/Hero.astro';
 import Navbar from '../components/Navbar.astro';
+import About from '../components/About.tsx';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title='Tableworks'>
 	<Navbar/>
 	<Hero/>
+	<About client:load />
 </Layout>
