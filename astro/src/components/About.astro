@@ -1,0 +1,50 @@
+---
+const fileId = import.meta.env.PUBLIC_CV_DRIVE_ID;
+const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+---
+
+<section id="about" class="py-16 px-6 border-t border-border">
+  <div class="max-w-4xl mx-auto">
+    <div class="mb-6 text-text-muted">
+      <span class="text-accent">$</span> ls about/
+    </div>
+    <h2 class="text-3xl font-semibold mb-8">
+      About <span class="text-accent">Me</span>
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="border border-border p-6 hover:border-blue transition-colors">
+        <div class="text-accent mb-2">// Education</div>
+        <div class="text-sm">
+          I hold a degree in Medical Education and am an alumnus of Purwadhika
+          Digital Technology School's Web Development Bootcamp.
+        </div>
+      </div>
+      <div class="border border-border p-6 hover:border-blue transition-colors">
+        <div class="text-accent mb-2">// Problem-solving</div>
+        <div class="text-sm">
+          I approach challenges with a logical and systemic mindset.
+        </div>
+      </div>
+      <div class="border border-border p-6 hover:border-blue transition-colors">
+        <div class="text-accent mb-2">// Experience</div>
+        <div class="text-sm">I have a diverse portfolio of projects.</div>
+      </div>
+      <div class="border border-border p-6 hover:border-blue transition-colors">
+        <div class="text-accent mb-2">// Technical Skill</div>
+        <div class="text-sm">
+          As a Fullstack Web Developer, I specialize in React JS and Tailwind
+          CSS. My expertise extends to backend technologies, including Express
+          JS for server-side development, SQL databases for efficient data
+          management, TypeScript for enhanced code quality, and Golang for
+          high-performance applications.
+        </div>
+      </div>
+    </div>
+    <a
+      href={downloadUrl}
+      class="inline-block mt-8 px-6 py-3 bg-accent hover:bg-accent-hover text-bg font-medium rounded transition-colors"
+    >
+      Download My Resume
+    </a>
+  </div>
+</section>
