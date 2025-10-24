@@ -1,13 +1,13 @@
-import React from 'react';
+import { type MouseEvent } from 'react';
 import { useStore } from '@nanostores/react';
 import { isDownloading } from '../stores/downloadStore';
 
-const DownloadButton: React.FC = () => {
+const DownloadButton = () => {
   const $isDownloading = useStore(isDownloading);
   const fileId = import.meta.env.PUBLIC_CV_DRIVE_ID;
   const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
 
-  const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
     if ($isDownloading) {
       event.preventDefault();
       return;
