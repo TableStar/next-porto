@@ -1,6 +1,5 @@
 ---
-const fileId = import.meta.env.PUBLIC_CV_DRIVE_ID;
-const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+import DownloadButton from './DownloadButton.tsx';
 ---
 
 <section id="about" class="py-16 px-6 border-t border-border">
@@ -40,11 +39,6 @@ const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
         </div>
       </div>
     </div>
-    <a
-      href={downloadUrl}
-      class="inline-block mt-8 px-6 py-3 bg-accent hover:bg-accent-hover text-bg font-medium rounded transition-colors"
-    >
-      Download My Resume
-    </a>
+    <DownloadButton client:load />
   </div>
 </section>
