@@ -1,20 +1,19 @@
-import { type MouseEvent } from 'react';
+import { useState, type MouseEvent } from 'react';
 import { useStore } from '@nanostores/react';
-import { isDownloading } from '../stores/downloadStore';
 
 const DownloadButton = () => {
-  const $isDownloading = useStore(isDownloading);
+  const [isDownloading,setIsDownloading] = useState<boolean>(false);
   const fileId = import.meta.env.PUBLIC_CV_DRIVE_ID;
   const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
 
   const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
-    if ($isDownloading) {
+    if (isDownloading) {
       event.preventDefault();
       return;
     }
-    isDownloading.set(true);
+    setIsDownloading(true);
     setTimeout(() => {
-      isDownloading.set(false);
+      setIsDownloading(false);
     }, 6000);
   };
 
@@ -23,10 +22,10 @@ const DownloadButton = () => {
       href={downloadUrl}
       onClick={handleClick}
       className={`inline-block mt-8 px-6 py-3 bg-accent text-bg font-medium rounded transition-colors ${
-        $isDownloading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-accent-hover'
+        isDownloading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-accent-hover'
       }`}
     >
-      {$isDownloading ? 'Downloading...' : 'Download My Resume'}
+      {isDownloading ? 'Downloading...' : 'Download My Resume'}
     </a>
   );
 };
