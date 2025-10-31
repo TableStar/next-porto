@@ -51,12 +51,6 @@ importers:
         specifier: ^4.1.12
         version: 4.1.12
     devDependencies:
-      '@iconify-json/logos':
-        specifier: ^1.2.10
-        version: 1.2.10
-      '@iconify-json/material-symbols':
-        specifier: ^1.2.44
-        version: 1.2.44
       '@iconify-json/mdi':
         specifier: ^1.2.3
         version: 1.2.3
@@ -344,12 +338,6 @@ packages:
     resolution: {integrity: sha512-A/IxlMLShx3KjV/HeTcTfaMxdwy690+L/ZADoeaTltLx+CVuzkeVIPuybK3jrRfw7YZnmdKsVVHAlEPIAEUNlA==}
     peerDependencies:
       react-hook-form: ^7.55.0
-
-  '@iconify-json/logos@1.2.10':
-    resolution: {integrity: sha512-qxaXKJ6fu8jzTMPQdHtNxlfx6tBQ0jXRbHZIYy5Ilh8Lx9US9FsAdzZWUR8MXV8PnWTKGDFO4ZZee9VwerCyMA==}
-
-  '@iconify-json/material-symbols@1.2.44':
-    resolution: {integrity: sha512-NAJjhswaK9FxBeIzFFsNygws7wHtmAkBWhF4YEwn1NZIMbA+LNITqhUiq6sP5mOdKQqnoritFTlQaZ47a5BgBg==}
 
   '@iconify-json/mdi@1.2.3':
     resolution: {integrity: sha512-O3cLwbDOK7NNDf2ihaQOH5F9JglnulNDFV7WprU2dSoZu3h3cWH//h74uQAB87brHmvFVxIOkuBX2sZSzYhScg==}
@@ -2551,14 +2539,6 @@ snapshots:
     dependencies:
       '@standard-schema/utils': 0.3.0
       react-hook-form: 7.64.0(react@19.2.0)
-
-  '@iconify-json/logos@1.2.10':
-    dependencies:
-      '@iconify/types': 2.0.0
-
-  '@iconify-json/material-symbols@1.2.44':
-    dependencies:
-      '@iconify/types': 2.0.0
 
   '@iconify-json/mdi@1.2.3':
     dependencies:
