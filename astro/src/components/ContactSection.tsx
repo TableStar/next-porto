@@ -29,7 +29,7 @@ const ContactSection = () => {
     }
 
     try {
-      const response = await fetch(backendUrl, {
+      const response = await fetch(backendUrl + "/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
