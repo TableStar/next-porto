@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import phone from "../assets/phone.png";
 import mail from "../assets/mail.png";
-import { ContactFormData, contactFormSchema } from "../types/ContactFormSchema";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-
+import { contactFormSchema, type ContactFormData } from "../types/ContactFormSchema";
+import Image from "astro/components/Image.astro";
 const Contact = () => {
   const {
     register,
