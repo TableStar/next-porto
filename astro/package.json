@@ -27,5 +27,5 @@
   "devDependencies": {
     "@iconify-json/mdi": "^1.2.3"
   },
-  "engines": { "node": "24" }
+  "engines": { "node": "22" }
 }
