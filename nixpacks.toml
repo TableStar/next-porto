@@ -1,15 +1,15 @@
+# nixpacks.toml
+[build]
+builder = "node"
+
 [phases.setup]
 nixPkgs = ["nodejs_20", "pnpm"]
 
 [phases.install]
-cmds = [
-  "cd astro && pnpm install --frozen-lockfile"
-]
+cmds = ["cd astro && pnpm install --frozen-lockfile"]
 
 [phases.build]
-cmds = [
-  "cd astro && pnpm run build"
-]
+cmds = ["cd astro && pnpm run build"]
 
 [start]
 cmd = "cd astro && pnpm run preview"
