@@ -12,17 +12,22 @@ import { SEO } from "astro-seo";
 
 <Layout title="Afra Hanifi | Fullstack Dev Portfolio">
   <SEO
+    slot="head"
     title="Afra Hanifi - Fullstack Developer"
     description="Specializing in Typescript"
     openGraph={{
       basic: {
         title: "Afra Hanifi - Fullstack Developer",
         type: "website",
-        image: "/profilepic.png",
+        image: "https://portfolio.tableworks.my.id/profilepic.png",
+        url: "https://portfolio.tableworks.my.id",
       },
       optional: {
         siteName: "Tableworks",
       },
+    }}
+    twitter={{
+      card: "summary_large_image",
     }}
   />
   <Navbar />
